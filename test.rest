@@ -1,18 +1,32 @@
 POST http://127.0.0.1:8000/login
 Content-Type: application/json
 
-{"username":"zack1","password":"pass1234"}
+{"username":"newuser","password":"pass1234"}
 
 ###
 POST http://127.0.0.1:8000/signup
 Content-Type: application/json
 
-{"username":"zack1","password":"pass1234","email":"luca@gmail.com"}
+{"username":"newuser","password":"pass1234","email":"lucas@gmail.com"}
+
+
 ###
 
 GET http://127.0.0.1:8000/test_token
 Content-Type: application/json
+Authorization: Token ea1a1229ce52fb286d3b5cda209c48c4fd822306
+
 
 ###
 GET http://127.0.0.1:8000/workout
 Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/update-profile
+Content-Type: application/json
+Authorization: Token ea1a1229ce52fb286d3b5cda209c48c4fd822306
+
+{
+    "current_weight": 69,
+    "desired_weight": 75
+}

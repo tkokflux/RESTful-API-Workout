@@ -7,5 +7,6 @@ urlpatterns = [
     re_path('login', views.login),
     re_path('signup', views.signup),
     re_path('test_token', views.test_token),
-    re_path('workout/', viewz.getworkout),
+    re_path('workout', viewz.getworkout),
+    re_path('update-profile', views.update_profile),
 ]
